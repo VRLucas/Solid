@@ -1,1 +1,17 @@
-
+import { Shop } from './srp/shop';
+import { Order } from './srp/order';
+import { Message } from './srp/msg';
+import { Persistence } from './srp/persisten';
+import { Product } from './srp/product';
+const cart = new Shop();
+const msg = new Message();
+const persis = new Persistence();
+const order = new Order(cart, msg, persis);
+cart.addItem(new Product('Pen', 3.49));
+cart.addItem(new Product('Book', 12.99));
+cart.addItem(new Product('pencil', 1.3));
+cart.addItem(new Product('Notebook', 12.99));
+console.log(cart.items);
+console.log(order.orderStatus);
+order.checkout();
+console.log(order.orderStatus);
