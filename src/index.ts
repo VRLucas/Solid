@@ -1,8 +1,8 @@
-import { Shop } from './srp/shop';
-import { Order } from './srp/order';
-import { Message } from './srp/msg';
-import { Persistence } from './srp/persisten';
-import { Product } from './srp/product';
+import { Shop } from './srp/entitens/shop';
+import { Order } from './srp/entitens/order';
+import { Message } from './srp/services/msg';
+import { Persistence } from './srp/services/persisten';
+import { Product } from './srp/entitens/product';
 const cart = new Shop();
 const msg = new Message();
 const persis = new Persistence();

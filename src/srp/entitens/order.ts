@@ -1,7 +1,7 @@
 import { OrderStatus } from '../interfaces/order-status';
 import { Shop } from './shop';
-import { Message } from './msg';
-import { Persistence } from './persisten';
+import { Message } from '../services/msg';
+import { Persistence } from '../services/persisten';
 
 export class Order {
   private _orderStatus: OrderStatus = 'open';
